@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "start": "nodemon --watch src --exec npm run server",
+    "server":"node src/app.js",
+    "lint": "eslint **/*.js" // --exec 'npm run lint && node'
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "express": "^4.16.4",
     "ipaddr": "0.0.9",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "vue": "^2.6.10"
   }
 }
